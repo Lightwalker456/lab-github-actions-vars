@@ -39,12 +39,12 @@ jobs:
           # Exemplo: RANDOM_NUM=$RANDOM
           # echo "BUILD_HASH=$RANDOM_NUM" >> $GITHUB_ENV
           RANDOM_NUM=$RANDOM
-          echo "BUILD_HASH=VALOR_GERADO_AQUI" >> $GITHUB_ENV # Placeholder
+          echo "BUILD_HASH=$RANDOM_NUM" >> $GITHUB_ENV # Placeholder
 
       - name: "Passo 5: Usar Codigo Dinamico"
         run: |
           # TODO: Imprima o BUILD_HASH gerado no passo anterior
-          echo "O hash gerado para este build foi: $URL_AMBIENTE"
+          echo "O hash gerado para este build foi: $BUILD_HASH"
 
   deploy_app:
     name: Deploy da Aplicacao
